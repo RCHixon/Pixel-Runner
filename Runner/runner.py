@@ -29,8 +29,15 @@ while True:
          pygame.quit()
          exit()
       #check for collision with mouse on player character
-      if event.type == pygame.MOUSEMOTION:
-         if player_rect.collidepoint(event.pos): print('collision')
+      #if event.type == pygame.MOUSEMOTION:
+      #   if player_rect.collidepoint(event.pos): print('collision')
+
+      if event.type == pygame.KEYDOWN:
+         if event.key == pygame.K_SPACE:
+            print('jump')
+
+      if event.type == pygame.KEYUP:
+         print('key up')
 
    #place surfaces at set positions (left, top)
    screen.blit(sky_surf,(0,0)) 
